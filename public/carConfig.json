@@ -1,0 +1,41 @@
+{
+  "model": "Acme TurboCar 2024",
+  "basePrice": 28000,
+  "options": {
+    "EXTERIOR": {
+      "COLOR": {
+        "SLV": { "name": "Silver", "price": 0 },
+        "BLK": { "name": "Black", "price": 500 },
+        "RRD": { "name": "Racing Red", "price": 800, "requires": ["STD_ALLOY"] }
+      },
+      "WHEELS": {
+        "STD_ALLOY": { "name": "Standard Alloy", "price": 0 },
+        "SPORT_ALLOY": { "name": "Sport Alloy", "price": 1200, "requires": ["SPORT_PKG"] },
+        "PERF_ALLOY": { "name": "Performance Alloy", "price": 2000, "requires": ["PERFORMANCE_PKG"], "conflicts": ["BASE_TRIM"] }
+      }
+    },
+    "INTERIOR": {
+      "MATERIALS": {
+        "CLOTH": { "name": "Cloth", "price": 0 },
+        "LEATHER": { "name": "Leather", "price": 2000}
+      },
+      "TRIM": {
+        "BASE_TRIM": { "name": "Base", "price": 0 },
+        "SPORT_TRIM": { "name": "Sport", "price": 800 }  
+      },
+      "FEATURES": {
+        "VENT_SEATS": { "name": "Ventilated Seats", "price": 1000, "requires": ["LEATHER"] }
+      }
+    },
+    "MOTOR": {
+      "PACKAGES": {
+        "SPORT_PKG": { "name": "Sport Package", "price": 2500 },
+        "PERFORMANCE_PKG": { "name": "Performance Package", "price": 3000 }
+      },
+      "POWERTRAIN": {
+        "STD_ENG": { "name": "Standard Engine", "price": 0 },
+        "PERF_ENG": { "name": "Performance Engine", "price": 1500, "requires": ["PERFORMANCE_PKG"] }
+      }
+    }
+  }
+}
